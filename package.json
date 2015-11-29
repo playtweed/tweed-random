@@ -1,0 +1,15 @@
+{
+  "name": "tweed-random",
+  "version": "0.1.0",
+  "description": "Seedable random number generator for HTML5 games",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:playtweed/tweed-random"
+  },
+  "author": "Tom McLean",
+  "license": "ISC"
+}
