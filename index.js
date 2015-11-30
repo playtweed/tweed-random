@@ -4,6 +4,8 @@ function Generator(seed) {
 	this.seed(seed);
 }
 
+// TODO: replace with mersenne twister probably?
+// MWC, from http://stackoverflow.com/a/19301306
 Generator.prototype.random = function() {
 	// Returns number between 0 (inclusive) and 1.0 (exclusive),
 	// just like Math.random().
@@ -31,6 +33,28 @@ Generator.prototype.choose = function(arr, remove) {
 		return arr[Math.floor(r)];
 	}
 };
+
+// Fisher-Yates, from http://stackoverflow.com/a/2450976
+Generator.prototype.shuffle = function(array) {
+	var currentIndex = array.length;
+	var temporaryValue;
+	var randomIndex;
+
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+
+		// Pick a remaining element...
+		randomIndex = this.integer(currentIndex);
+		currentIndex -= 1;
+
+		// And swap it with the current element.
+		temporaryValue = array[currentIndex];
+		array[currentIndex] = array[randomIndex];
+		array[randomIndex] = temporaryValue;
+	}
+
+	return array;
+}
 
 var random = new Generator();
 random.Generator = Generator;
