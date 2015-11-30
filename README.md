@@ -25,4 +25,6 @@ the module, and vice versa.
 
 ## Extra methods
 
+`integer(max)`: return an integer in the range [0, max)
+
 `choose(arr, [remove])`: return a random element of `arr`, optionally removing that element from the array.

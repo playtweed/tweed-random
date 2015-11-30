@@ -14,6 +14,10 @@ Generator.prototype.random = function() {
     return result + 0.5;
 };
 
+Generator.prototype.integer = function(max) {
+	return Math.floor(this.random() * max);
+};
+
 Generator.prototype.seed = function(seed) {
 	this.m_z = 987654321;
 	this.m_w = seed || 123456789;
