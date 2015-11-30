@@ -19,9 +19,8 @@ Generator.prototype.seed = function(seed) {
 	this.m_w = seed || 123456789;
 };
 
-
 Generator.prototype.choose = function(arr, remove) {
-	var r = arr.length * random();
+	var r = arr.length * this.random();
 	if(remove) {
 		return arr.splice(Math.floor(r), 1);
 	} else {
