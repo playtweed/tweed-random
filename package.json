@@ -11,5 +11,8 @@
     "url": "github:playtweed/tweed-random"
   },
   "author": "Tom McLean",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mersenne-twister": "^1.0.1"
+  }
 }
